@@ -1,0 +1,58 @@
+html, body {
+    height:100%;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+    font-size: 80px;
+}
+
+body {
+    background-color: black;
+}
+
+#board
+{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: purple;
+    color: #fff;
+    border: 3px solid purple;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    cursor: pointer;
+}
+
+.box
+{
+  border: 6px solid white;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #restart,button {
+    margin: 1% auto;
+    display: block;
+    cursor: pointer;
+    background-color: white;
+    color: purple;
+    padding: 25px 50px;
+    font-size: 30px;
+  }
+
+  #player, h2 {
+      color: white;
+      font: 24px
+  }
+
+  #gameStatus {
+      color: white;
+  }
