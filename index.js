@@ -95,8 +95,10 @@ for (let index = 0; index < boxes.length; index++) {
     });
 }
 
+
 // handle restart game button
-const button = document.getElementById("restart").addEventListener("click", function () {
+function restartTheGame() {
+    document.getElementById("restart").addEventListener("click", function () {
     for (let index = 0; index < board.length; index++) {
         board[index] = "";
         setBoxText(index);
