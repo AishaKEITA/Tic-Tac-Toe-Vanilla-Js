@@ -89,16 +89,16 @@ function handleWinner() {
 }
 
 /*----- add and define event listeners -----*/
+document.getElementById("restart").addEventListener("click", restartTheGame);
+
 for (let index = 0; index < boxes.length; index++) {
     boxes[index].addEventListener('click', function (event) {
         handleClickBox(index)
     });
 }
 
-
 // handle restart game button
 function restartTheGame() {
-    document.getElementById("restart").addEventListener("click", function () {
     for (let index = 0; index < board.length; index++) {
         board[index] = "";
         setBoxText(index);
@@ -108,7 +108,20 @@ function restartTheGame() {
     // set player and gameStatus to the same values as when loading the page the first time
     setCurrentPlayerText(currentPlayer);
     setGameStatusText(gameInProgress);
-});
+};
+
+// // handle restart game button
+// const button = document.getElementById("restart").addEventListener("click", function () {
+//     for (let index = 0; index < board.length; index++) {
+//         board[index] = "";
+//         setBoxText(index);
+//     }
+//     currentPlayer = 'X';
+//     counter = 0;
+//     // set player and gameStatus to the same values as when loading the page the first time
+//     setCurrentPlayerText(currentPlayer);
+//     setGameStatusText(gameInProgress);
+// });
 
 // set player and gameStatus when loading the page the first time
 setCurrentPlayerText(currentPlayer);
